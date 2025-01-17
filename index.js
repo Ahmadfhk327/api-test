@@ -5,6 +5,7 @@ const port = process.env.PORT || 3000;
 
 const data = JSON.parse(fs.readFileSync("./data.json", "utf-8"));
 // Simple GET endpoint
+app.use(cors());
 app.get("/api", (req, res) => {
   res.json({
     status: "success",
